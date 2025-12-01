@@ -1,1 +1,1 @@
-export const testimonials: any[] = []
+export const testimonials: unknown[] = []

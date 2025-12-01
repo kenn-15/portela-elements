@@ -1,1 +1,1 @@
-export const projects: any[] = []
+export const projects: unknown[] = []

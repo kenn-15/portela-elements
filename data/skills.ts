@@ -1,1 +1,1 @@
-export const skills: any[] = []
+export const skills: unknown[] = []

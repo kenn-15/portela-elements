@@ -1,1 +1,34 @@
+:root {
+  /* Color tokens */
+  --color-primary-500: #158fff;
+  --color-primary-700: #0b54b3;
+  --color-neutral-50: #fafafa;
+  --color-neutral-700: #4a4a50;
+
+  /* Spacing scale (example) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+
+  /* Type */
+  --font-sans:
+    Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial;
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+}
+
+/* Utility layer to make variables available to Tailwind base classes */
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    color: var(--color-neutral-700);
+    background-color: var(--color-neutral-50);
+  }
+}
 /* placeholder – styles added later */

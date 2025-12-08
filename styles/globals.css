@@ -2,4 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* placeholder global styles — refine once brand tokens are set */
+@import './variables.css';
+
+/* placeholder global styles — refined with token variables in `variables.css` */

@@ -1,3 +1,3 @@
 export default function Services() {
-  return <section>Services placeholder</section>;
+  return <section>Services placeholder</section>
 }

@@ -1,3 +1,3 @@
 export default function Testimonials() {
-  return <section>Testimonials placeholder</section>;
+  return <section>Testimonials placeholder</section>
 }

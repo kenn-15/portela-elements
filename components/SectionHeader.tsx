@@ -1,3 +1,7 @@
-export default function SectionHeader() {
-  return <div>SectionHeader placeholder</div>
+type SectionHeaderProps = {
+  label?: string
+}
+
+export default function SectionHeader({ label }: SectionHeaderProps) {
+  return <div>{label ?? 'SectionHeader placeholder'}</div>
 }

@@ -1,0 +1,16 @@
+{
+  "ci": {
+    "collect": {
+      "numberOfRuns": 3,
+      "staticDistDir": "out"
+    },
+    "assert": {
+      "assertions": {
+        "categories:performance": ["error", 0.9],
+        "categories:accessibility": ["error", 1],
+        "categories:best-practices": ["error", 0.9],
+        "categories:seo": ["error", 0.9]
+      }
+    }
+  }
+}

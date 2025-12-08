@@ -2,22 +2,22 @@
 // Replace `ZAPIER_WEBHOOK_URL` with your actual webhook URL when ready.
 
 export type ZapierPayload = {
-  name?: string;
-  email?: string;
-  message?: string;
-  [key: string]: unknown;
-};
+  name?: string
+  email?: string
+  message?: string
+  [key: string]: unknown
+}
 
 export async function sendZapierWebhook(webhookUrl: string, payload: ZapierPayload) {
-  if (!webhookUrl) throw new Error('Missing Zapier webhook URL');
+  if (!webhookUrl) throw new Error('Missing Zapier webhook URL')
 
   const res = await fetch(webhookUrl, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(payload),
-  });
+    body: JSON.stringify(payload)
+  })
 
-  return res;
+  return res
 }
 
 // Front-end example (to be used in /contact form submit handler):

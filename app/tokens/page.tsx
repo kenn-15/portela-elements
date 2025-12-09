@@ -1,7 +1,18 @@
+import React, { useEffect, useRef, useState } from 'react'
 import Container from '@/components/system/Container'
 import Heading from '@/components/system/Heading'
 
 export default function TokensPage() {
+  const firstTileRef = useRef<HTMLDivElement | null>(null)
+  const [computedBg, setComputedBg] = useState<string>('')
+
+  useEffect(() => {
+    if (firstTileRef.current) {
+      const bg = getComputedStyle(firstTileRef.current).backgroundColor
+      setComputedBg(bg)
+    }
+  }, [])
+
   return (
     <main>
       <Container>
@@ -16,13 +27,20 @@ export default function TokensPage() {
             <div>
               <Heading level={2}>Colors</Heading>
               <div className="mt-4 flex gap-4 items-center">
-                <div className="w-28 h-12 rounded-md" style={{ background: '#158fff' }} />
+                <div
+                  ref={firstTileRef}
+                  className="w-28 h-12 rounded-md"
+                  style={{ background: '#158fff' }}
+                />
                 <div className="w-28 h-12 rounded-md" style={{ background: '#0b54b3' }} />
                 <div
                   className="w-28 h-12 rounded-md border"
                   style={{ background: '#fafafa' }}
                 />
               </div>
+              <p className="mt-2 text-sm text-neutral-700">
+                Computed first tile background: {computedBg || '—'}
+              </p>
             </div>
 
             <div>

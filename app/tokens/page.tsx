@@ -1,6 +1,5 @@
 import Container from '@/components/system/Container'
 import Heading from '@/components/system/Heading'
-import Button from '@/components/system/Button'
 
 export default function TokensPage() {
   return (
@@ -17,17 +16,11 @@ export default function TokensPage() {
             <div>
               <Heading level={2}>Colors</Heading>
               <div className="mt-4 flex gap-4 items-center">
-                <div
-                  className="w-28 h-12 rounded-md"
-                  style={{ background: 'var(--color-primary-500)' }}
-                />
-                <div
-                  className="w-28 h-12 rounded-md"
-                  style={{ background: 'var(--color-primary-700)' }}
-                />
+                <div className="w-28 h-12 rounded-md" style={{ background: '#158fff' }} />
+                <div className="w-28 h-12 rounded-md" style={{ background: '#0b54b3' }} />
                 <div
                   className="w-28 h-12 rounded-md border"
-                  style={{ background: 'var(--color-neutral-50)' }}
+                  style={{ background: '#fafafa' }}
                 />
               </div>
             </div>
@@ -42,8 +35,22 @@ export default function TokensPage() {
             <div>
               <Heading level={2}>Buttons</Heading>
               <div className="mt-4 flex gap-4">
-                <Button>Primary</Button>
-                <Button variant="ghost">Ghost</Button>
+                <button
+                  className="inline-flex items-center justify-center rounded-md px-4 py-2 font-medium"
+                  style={{ background: '#158fff', color: '#fff' }}
+                >
+                  Primary
+                </button>
+                <button
+                  className="inline-flex items-center justify-center rounded-md px-4 py-2 font-medium border"
+                  style={{
+                    background: 'transparent',
+                    color: '#0b54b3',
+                    borderColor: '#0b54b3'
+                  }}
+                >
+                  Ghost
+                </button>
               </div>
             </div>
           </div>
